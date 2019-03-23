@@ -1,0 +1,2 @@
+module SiteHostelHelper
+end
