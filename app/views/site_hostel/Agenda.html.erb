@@ -1,2 +1,7 @@
-<h1>SiteHostel#Agenda</h1>
-<p>Find me in app/views/site_hostel/Agenda.html.erb</p>
+<div id="div_calendar">
+    <div class="jumbotron" id="jumbotron_calendar">
+        <%= month_calendar do |date| %>
+    <%= date %>
+    <% end %>
+    </div>
+</div>

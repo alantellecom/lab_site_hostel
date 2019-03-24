@@ -5,13 +5,14 @@
   background-size: cover;
 }
 
-.navbar-nav{
+.navbar-light .navbar-collapse .navbar-nav{
   float: right!important;
+
 }
 
 h2 { font-size: smaller; }
 
-.navbar.navbar-light .collapse.navbar-collapse .navbar-nav .nav-item .nav-link:hover {
+.navbar-light .navbar-collapse .navbar-nav .nav-item .nav-link:hover {
   color: #eba8d4!important;
 }
 

@@ -3,6 +3,8 @@ class SiteHostelController < ApplicationController
   end
 
   def Agenda
+
+    
   end
 
   def Fotos
