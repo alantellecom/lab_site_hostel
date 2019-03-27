@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :meetings
   root 'site_hostel#Home'
   get 'site_hostel/Home'
   get 'site_hostel/Agenda'
