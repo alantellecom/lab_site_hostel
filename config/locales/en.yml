@@ -31,3 +31,10 @@
 
 en:
   hello: "Hello world"
+
+en:
+  helpers:
+    submit:
+      meeting:
+        create: "Adicionar"
+        update: "Atualizar"

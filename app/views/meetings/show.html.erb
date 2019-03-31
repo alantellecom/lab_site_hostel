@@ -1,19 +1,19 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Name:</strong>
+  <strong>Nome:</strong>
   <%= @meeting.name %>
 </p>
 
 <p>
-  <strong>Start time:</strong>
+  <strong>Data de chegada:</strong>
   <%= @meeting.start_time %>
 </p>
 
 <p>
-  <strong>End time:</strong>
+  <strong>Data de saída:</strong>
   <%= @meeting.end_time %>
 </p>
 
-<%= link_to 'Edit', edit_meeting_path(@meeting) %> |
-<%= link_to 'Back', meetings_path %>
+<%= link_to 'Editar', edit_meeting_path(@meeting) %> |
+<%= link_to 'Voltar', meetings_path %>

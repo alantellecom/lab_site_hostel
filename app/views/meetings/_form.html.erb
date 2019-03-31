@@ -11,22 +11,24 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name %>
+
+<form>
+  <div class="form-group">
+    <%= form.label :nome %>
+    <%= form.text_field :name,  class:"form-control" %>
   </div>
 
-  <div class="field">
-    <%= form.label :start_time %>
-    <%= form.datetime_select :start_time %>
+  <div class="form-group">
+    <%= form.label :Chegada %>
+    <%= form.datetime_select :start_time,  class: "form-control" %>
   </div>
 
-  <div class="field">
-    <%= form.label :end_time %>
-    <%= form.datetime_select :end_time %>
+  <div class="form-group">
+    <%= form.label :Partida %>
+    <%= form.datetime_select :end_time,  class:"form-control" %>
   </div>
 
-  <div class="actions">
-    <%= form.submit %>
+  <div class="form-group">
+    <%= form.submit class:"btn btn-primary" %>
   </div>
 <% end %>
