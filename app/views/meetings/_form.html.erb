@@ -18,17 +18,29 @@
     <%= form.text_field :name,  class:"form-control" %>
   </div>
 
+<<<<<<< HEAD
   <div class="form-group">
     <%= form.label :Chegada %>
     <%= form.datetime_select :start_time,  class: "form-control" %>
   </div>
+=======
+<%= form.label :check_in %>
+<div class="form-inline"> 
+    <%= form.datetime_select  :start_time, {},  class:"form-control" %>
+</div>
+>>>>>>> 8a3e596809d17301d04cb51f49f39e1bd3aa1c86
 
-  <div class="form-group">
-    <%= form.label :Partida %>
-    <%= form.datetime_select :end_time,  class:"form-control" %>
-  </div>
+<br />
+
+<%= form.label :check_out %>
+<div class="form-inline">  
+    <%= form.datetime_select :end_time, {}, class:"form-control" %>
+ </div>
+ 
+ <br />
 
   <div class="form-group">
     <%= form.submit class:"btn btn-primary" %>
   </div>
+  </form>
 <% end %>
