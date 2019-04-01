@@ -12,35 +12,41 @@
   <% end %>
 
 
-<form>
-  <div class="form-group">
-    <%= form.label :nome %>
-    <%= form.text_field :name,  class:"form-control" %>
-  </div>
-
-<<<<<<< HEAD
-  <div class="form-group">
-    <%= form.label :Chegada %>
-    <%= form.datetime_select :start_time,  class: "form-control" %>
-  </div>
-=======
-<%= form.label :check_in %>
-<div class="form-inline"> 
-    <%= form.datetime_select  :start_time, {},  class:"form-control" %>
-</div>
->>>>>>> 8a3e596809d17301d04cb51f49f39e1bd3aa1c86
-
-<br />
-
-<%= form.label :check_out %>
-<div class="form-inline">  
-    <%= form.datetime_select :end_time, {}, class:"form-control" %>
- </div>
- 
- <br />
-
-  <div class="form-group">
-    <%= form.submit class:"btn btn-primary" %>
-  </div>
+  <form>
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="form-group">
+          <%= form.label :nome%>
+          <%= form.text_field :name,  class:"form-control" %>
+        </div>
+      </div>
+    </div> 
+    
+    <div class="row">
+      <div class="col-lg-6">
+        <%= form.label :check_in %>
+        <div class="form-inline"> 
+            <%= form.datetime_select  :start_time, { ampm: true, date_separator: "-", datetime_separator: "&nbsp&nbsp&nbsp" , order: [:day, :month, :year] },  class:"form-control" %>
+        </div>
+      </div>
+    </div>    
+    
+    <br />
+   
+   <div class="row">
+      <div class="col-lg-6">
+        <%= form.label :check_out %>
+        <div class="form-inline">  
+            <%= form.datetime_select :end_time, {ampm: true, date_separator: "-", datetime_separator: "&nbsp&nbsp&nbsp" , order: [:day, :month, :year] }, class:"form-control" %>
+        </div>
+      </div>
+    </div>    
+     
+     <br />
+    
+      <div class="form-group">
+        <%= form.submit class:"btn btn-primary" %>
+      </div>
   </form>
+  
 <% end %>
