@@ -2,11 +2,11 @@ class SiteHostelController < ApplicationController
   def Home
   end
 
-  def Agenda
-
-    
-  end
 
   def Fotos
   end
+
+  def saiba_mais
+  end
+
 end
