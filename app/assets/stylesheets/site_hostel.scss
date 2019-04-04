@@ -9,19 +9,12 @@
   }
   
   
-.green{
-    background-color:#6fb936;
-}
+.green{background-color:#6fb936;}
 
-.thumb{
-    margin-bottom: 30px;
-}
+.thumb{margin-bottom: 30px;}
 
-.page-top{
-    margin-top:85px;
-}
-  
-     
+.page-top{margin-top:85px;}
+      
 img.zoom {
     width: 100%;
     height: 200px;
@@ -40,19 +33,47 @@ img.zoom {
     -o-transform: scale(1.2);
     transform: scale(1.2);
 }
-.modal-header {
+
+.modal-header {border-bottom: none;}
+
+.modal-title {color:#000;}
      
-    border-bottom: none;
-}
-      .modal-title {
-          color:#000;
-      }
-     
-      .modal-footer{
-        display:none;  
-      }
+.modal-footer{display:none;}
+  
+.container.saiba_mais{padding: 40px;}
+
+.jumbotron.head {
+    background-color: rgba(255,255,255, 0.75);
+    padding: 30px;
+  }
+  
+  #sub-titulo{font-size: 20px;}
+  
+  #div_head {
+    text-align: center;
+    padding: 50px;
+    background: image-url('Agulhas_Negras.jpg') no-repeat;
+    background-size: cover;
+  }
+  
+  .navbar-light .navbar-collapse .navbar-nav{ float: right!important;}
+  
+  h2 { font-size: smaller; }
+  
+  .navbar-light .navbar-collapse .navbar-nav .nav-item .nav-link:hover {
+    color: rgb(15, 108, 184)!important;
+  }
   
   
-#saiba_mais_jumb{
-    padding: 40px;
-}
+  .navbar-light .navbar-collapse .navbar-nav .nav-item .nav-link {
+    margin-top:10px;
+    margin-right:10px;
+    border-radius: 10px;
+    background-color: rgba(255,255,255, 0.8)!important;
+  }
+  
+
+.featurette-heading{font-size: 20px;}
+
+
+.text-muted{font-size: 25px;}

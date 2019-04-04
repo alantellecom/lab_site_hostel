@@ -7,9 +7,16 @@
     padding: 40px;
 }
 
-#jumbotron_reservas{
+.jumbotron.resumo_reservas{
     
    padding: 5px;
-    
-    
 }
+
+.jumbotron.form_reserva{
+
+    padding: 45px;
+}
+      
+.jumbotron.calendario {
+    background-color: rgba(255,255,255, 0.75);
+  }  

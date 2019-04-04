@@ -11,42 +11,46 @@
     </div>
   <% end %>
 
+  <div class="conteiner">
+    
+    <div class="jumbotron form_reserva" > 
+        <form >
+            
+            
+            <%= form.label :nome%>
+            <div class ="row">              
+              <div class= "col-xs-3">               
+                <%= form.text_field :name,  class:"form-control" %>
+              </div> 
+            </div>  
+            
+            <%= form.label :check_in %>
+            <div class ="row">
+              <div class= "col-xs-3">  
+                <div class="form-inline"> 
+                    <%= form.datetime_select  :start_time, { ampm: true, date_separator: "&nbsp", time_separator: "&nbsp", datetime_separator: "&nbsp&nbsp&nbsp" , order: [:day, :month, :year] },  class:"form-control" %>
+                </div>
+              </div>
+            </div>
 
-  <form>
-    <div class="row">
-      <div class="col-lg-6">
-        <div class="form-group">
-          <%= form.label :nome%>
-          <%= form.text_field :name,  class:"form-control" %>
-        </div>
-      </div>
-    </div> 
-    
-    <div class="row">
-      <div class="col-lg-6">
-        <%= form.label :check_in %>
-        <div class="form-inline"> 
-            <%= form.datetime_select  :start_time, { ampm: true, date_separator: "-", datetime_separator: "&nbsp&nbsp&nbsp" , order: [:day, :month, :year] },  class:"form-control" %>
-        </div>
-      </div>
-    </div>    
-    
-    <br />
-   
-   <div class="row">
-      <div class="col-lg-6">
-        <%= form.label :check_out %>
-        <div class="form-inline">  
-            <%= form.datetime_select :end_time, {ampm: true, date_separator: "-", datetime_separator: "&nbsp&nbsp&nbsp" , order: [:day, :month, :year] }, class:"form-control" %>
-        </div>
-      </div>
-    </div>    
-     
-     <br />
-    
-      <div class="form-group">
-        <%= form.submit class:"btn btn-primary" %>
-      </div>
-  </form>
+                <br />
+            
+            <%= form.label :check_out %>
+            <div class ="row">              
+              <div class= "col-xs-3"> 
+                <div class="form-inline">  
+                    <%= form.datetime_select :end_time, {ampm: true, date_separator: "&nbsp", time_separator: "&nbsp", datetime_separator: "&nbsp&nbsp&nbsp" , order: [:day, :month, :year] }, class:"form-control" %>
+                </div>
+              </div>
+            </div>
+               
+            <br />
+
+            <div class="form-group">
+              <%= form.submit class:"btn btn-primary" %>
+            </div>
+        </form>
+    </div>
+   </div> 
   
 <% end %>
