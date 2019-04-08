@@ -1,36 +1,47 @@
-  <div>
-        <nav class="navbar navbar-light navbar-expand-md sticky-top navigation-clean-button" style="height:80px;background-color:#37434d;color:#ffffff;">
-            <div class="container-fluid">
-              
-               
-                <%= link_to  root_path , class: "navbar-brand", style: "color: rgb(255,255,255);" do %>    
-                    <i class="fa fa-globe"></i>&nbsp;Saracutacus Hostel
-                <%end%>
-                <button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
-               
+<div>
+    <nav class="navbar navbar-light navbar-expand-md sticky-top navigation-clean-button" style="height:80px;background-color:#37434d;color:#ffffff;">
+        <div class="container-fluid">
+            
+            
+            <%= link_to  root_path , class: "navbar-brand", style: "color: rgb(255,255,255);" do %>    
+                <i class="fa fa-globe"></i>&nbsp;Saracutacus Hostel
+            <%end%>
+            <button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            
 
-                <div class="collapse navbar-collapse" id="navcol-1">
-                    <ul class="nav navbar-nav ml-auto">
+            <div class="collapse navbar-collapse" id="navcol-1">
+                <ul class="nav navbar-nav ml-auto">
+                    
+                        <li class="nav-item" role="presentation"><a class="nav-link" href="<%=site_hostel_Home_path %>"><i class="fa fa-home"></i>&nbsp;Home</a></li>
                         
-                         <li class="nav-item" role="presentation"><a class="nav-link" href="<%=site_hostel_Home_path %>"><i class="fa fa-home"></i>&nbsp;Home</a></li>
-                            
-                        
-                        <li class="nav-item" role="presentation">
-                            <%= link_to meetings_path, class:"nav-link" do %>
-                                <i class="fa fa-calendar"></i>&nbsp;Agenda
-                            <%end%>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            <%= link_to site_hostel_Fotos_path, class:"nav-link"  do %>
-                                <i class="fa fa-photo"></i>&nbsp;Fotos
-                            <%end%>
-                        </li>
-                    </ul>
-                </div>
-
-                
+                    
+                    <li class="nav-item" role="presentation">
+                        <%= link_to meetings_path, class:"nav-link" do %>
+                            <i class="fa fa-calendar"></i>&nbsp;Agenda
+                        <%end%>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <%= link_to site_hostel_Fotos_path, class:"nav-link"  do %>
+                            <i class="fa fa-photo"></i>&nbsp;Fotos
+                        <%end%>
+                    </li>
+                </ul>
             </div>
-        </nav>
-    </div>
+
+            
+        </div>
+    </nav>
+</div>
+
+<div>
+<% if current_user %>
+  Logged in as <%= current_user.email %>.
+  <%= link_to 'Log Out', logout_path %>
+<% else %>
+  <%= link_to 'Sign Up', signup_path %> or 
+  <%= link_to 'Log In', login_path %>
+<% end %>
+<p id='notice'><%= notice %></p>
+</div>
     
 
