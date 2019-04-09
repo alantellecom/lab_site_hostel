@@ -1,14 +1,17 @@
 class MeetingsController < ApplicationController
   before_action :set_meeting, only: [:show, :edit, :update, :destroy]
 
-  before_action	:is_signin
+  before_action	:is_signin, only: [:edit, :update, :destroy]
 
   # GET /meetings
   # GET /meetings.json
   def index
-
-    @user=current_user
-    @meetings_user	=	@user.meetings
+    if current_user
+      @user=current_user
+      @meetings_user	=	@user.meetings
+    else
+      @meetings_user= []
+    end
     @meetings= Meeting.all
  
   end
