@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+
+      <p>
+        <strong>Detalhes da Reserva:</strong>
+      </p>
+    
+      <p>
+        <strong>Nome:</strong>
+        <%= @reserva_info.user.name %>
+      </p>
+
+      <p>
+        <strong>Data de chegada:</strong>
+        <%= @reserva_info.start_time %>
+      </p>
+
+      <p>
+        <strong>Data de saída:</strong>
+        <%= @reserva_info.end_time %>
+      </p>
+
+      <p>
+        <strong>Obrigado pela preferencia!</strong>
+      </p>
+
+
+
+  </body>
+</html>
+

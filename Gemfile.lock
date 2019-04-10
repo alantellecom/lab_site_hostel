@@ -98,6 +98,7 @@ GEM
       rails-dom-testing (>= 1, < 3)
       railties (>= 4.2.0)
       thor (>= 0.14, < 2.0)
+    json (2.2.0)
     libv8 (6.7.288.46.1)
     listen (3.1.5)
       rb-fsevent (~> 0.9, >= 0.9.4)
@@ -124,6 +125,11 @@ GEM
       mini_portile2 (~> 2.4.0)
     pg (1.1.4)
     popper_js (1.14.5)
+    postmark (1.15.0)
+      json
+    postmark-rails (0.19.0)
+      actionmailer (>= 3.0.0)
+      postmark (~> 1.15.0)
     public_suffix (3.0.3)
     puma (3.12.1)
     rack (2.0.6)
@@ -237,6 +243,7 @@ DEPENDENCIES
   listen (>= 3.0.5, < 3.2)
   mini_racer
   pg
+  postmark-rails
   puma (~> 3.11)
   rails (~> 5.2.2, >= 5.2.2.1)
   sass-rails (~> 5.0)

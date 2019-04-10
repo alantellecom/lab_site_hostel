@@ -35,9 +35,11 @@ class MeetingsController < ApplicationController
   def create
     @meeting = Meeting.new(meeting_params)
     @meeting.user=current_user
-
+     
     respond_to do |format|
       if @meeting.save
+        UserMailer.reserva_email(@meeting).deliver_now
+       
         format.html { redirect_to @meeting, notice: 'Meeting was successfully created.' }
         format.json { render :show, status: :created, location: @meeting }
       else
