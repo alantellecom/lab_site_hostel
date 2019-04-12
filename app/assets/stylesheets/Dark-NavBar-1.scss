@@ -108,3 +108,19 @@
   background: #66d7d7;
 }
 
+
+.navbar-light .navbar-collapse .navbar-nav{ float: right!important;}
+  
+  h2 { font-size: smaller; }
+  
+  .navbar-light .navbar-collapse .navbar-nav .nav-item .nav-link:hover {
+    color: rgb(15, 108, 184)!important;
+  }
+  
+  
+  .navbar-light .navbar-collapse .navbar-nav .nav-item .nav-link {
+    margin-top:10px;
+    margin-right:10px;
+    border-radius: 10px;
+    background-color: rgba(255,255,255, 0.8)!important;
+  }
