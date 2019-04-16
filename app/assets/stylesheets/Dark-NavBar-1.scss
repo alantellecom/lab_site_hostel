@@ -37,20 +37,11 @@
   color: #888;
 }
 
-.navigation-clean-button .navbar-collapse, .navigation-clean-button .form-inline {
-  border-top-color: #ddd;
-}
+.navigation-clean-button .navbar-collapse .navbar-nav{ float: right!important;}
 
 .navigation-clean-button .navbar-nav a.active, .navigation-clean-button .navbar-nav > .show > a {
   background: none;
   box-shadow: none;
-}
-
-.navigation-clean-button.navbar-light .navbar-nav a.active, .navigation-clean-button.navbar-light .navbar-nav a.active:focus, .navigation-clean-button.navbar-light .navbar-nav a.active:hover {
-  color: #8f8f8f;
-  box-shadow: none;
-  background: none;
-  pointer-events: none;
 }
 
 .navigation-clean-button.navbar .navbar-nav .nav-link {
@@ -62,10 +53,19 @@
   color: #465765;
 }
 
-.navigation-clean-button.navbar-light .navbar-nav .nav-link:focus, .navigation-clean-button.navbar-light .navbar-nav .nav-link:hover {
-  color: #37434d !important;
-  background-color: transparent;
+.navbar-light .navbar-collapse .navbar-nav .nav-item .nav-link {
+  margin-top:10px;
+  margin-right:10px;
+  border-radius: 10px;
+  background-color: rgba(255,255,255, 0.8)!important;
 }
+
+
+.navigation-clean-button.navbar-light .navbar-nav .nav-link:hover {
+  color: rgb(15, 108, 184)!important;
+  
+}
+
 
 .navigation-clean-button .navbar-nav > li > .dropdown-menu {
   margin-top: -5px;
@@ -85,11 +85,6 @@
   color: inherit;
 }
 
-.navigation-clean-button .actions .login {
-  margin-right: 1rem;
-  text-decoration: none;
-  color: #465765;
-}
 
 .navigation-clean-button .navbar-text .action-button, .navigation-clean-button .navbar-text .action-button:active, .navigation-clean-button .navbar-text .action-button:hover {
   background: #56c6c6;

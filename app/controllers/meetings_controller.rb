@@ -1,10 +1,19 @@
 class MeetingsController < ApplicationController
   before_action :set_meeting, only: [:show, :edit, :update, :destroy]
 
+  before_action	:is_signin, only: [:edit, :update, :destroy]
+
   # GET /meetings
   # GET /meetings.json
   def index
-    @meetings = Meeting.all
+    if current_user
+      @user=current_user
+      @meetings_user	=	@user.meetings
+    else
+      @meetings_user= []
+    end
+    @meetings= Meeting.all
+ 
   end
 
   # GET /meetings/1
@@ -25,11 +34,17 @@ class MeetingsController < ApplicationController
   # POST /meetings.json
   def create
     @meeting = Meeting.new(meeting_params)
-
+    @meeting.user=current_user
+     
     respond_to do |format|
       if @meeting.save
+        UserMailer.reserva_email(@meeting).deliver_now
+
+        
+       
         format.html { redirect_to @meeting, notice: 'Meeting was successfully created.' }
         format.json { render :show, status: :created, location: @meeting }
+
       else
         format.html { render :new }
         format.json { render json: @meeting.errors, status: :unprocessable_entity }
@@ -69,6 +84,6 @@ class MeetingsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def meeting_params
-      params.require(:meeting).permit(:name, :start_time, :end_time)
+      params.require(:meeting).permit(:name, :start_time, :end_time, :user_session, :user_id, :name, :email)
     end
 end

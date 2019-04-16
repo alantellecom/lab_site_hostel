@@ -21,9 +21,9 @@
               </thead>
           
               <tbody>
-                <% @meetings.each do |meeting| %>
+                <% @meetings_user.each do |meeting| %>
                   <tr>
-                    <td><%= meeting.name %></td>
+                    <td><%= meeting.user.name %></td>
                     <td><%= meeting.start_time.to_s(:reserva_time) %></td>
                     <td><%= meeting.end_time.to_s(:reserva_time) %></td>
                     <td><%= link_to 'Detalhar', meeting %></td>
@@ -51,7 +51,7 @@
   
           <% meetings.each do |meeting| %>
             <div>
-              <%= meeting.name %>
+              <%= meeting.user.name %>
             </div>
           <% end %>
         <% end %>
