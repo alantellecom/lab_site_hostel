@@ -1,15 +1,45 @@
-<p id='alert'><%= alert %></p>
-<h1>Login</h1>
-<%= form_tag sessions_path do |form| %>
-  <div class='field'>
-    <%= label_tag :email %>
-    <%= text_field_tag :email %>
+
+<div class="container">
+  <div class="panel panel-default">
+
+    <p id='alert'><%= alert %></p>
+    <h1>Login</h1>
+    
+
+          <%= form_with url: sessions_path do |form| %>
+            <div class="jumbotron form_reserva" > 
+                <form>
+    
+                  <div class='field'>
+                    <%= form.label :email %>
+                    <div class ="row">
+                      <div class= "col-xs-3 col-xl-5"> 
+                          <%= form.text_field :email, class:"form-control" %>
+                      </div>
+                    </div>
+                  </div>
+                  <div class='field'>
+                    <%= form.label :password %>
+                      <div class ="row">
+                        <div class= "col-xs-3 col-xl-5"> 
+                          <%= form.password_field :password, class:"form-control" %>
+                        </div>
+                      </div>
+                  </div>
+                  
+                  <br />
+                  
+                  <div class='actions'>
+                    <%= form.submit 'Login' %>
+                  </div>
+            
+                </form>
+            </div>  
+        <% end %>
+
   </div>
-  <div class='field'>
-    <%= label_tag :password %>
-    <%= password_field_tag :password %>
-  </div>
-  <div class='actions'>
-    <%= submit_tag 'Login' %>
-  </div>
-<% end %>
+</div>
+  
+
+  
+
