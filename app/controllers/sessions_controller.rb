@@ -5,12 +5,13 @@ class SessionsController < ApplicationController
 
   def create
     user = User.authenticate(params[:email], params[:password] )
+    
     if   user.present?
       session[:user_id] = user.id
       redirect_to root_url, notice: "Logged in!"
-      @notice_loggedin=params[:notice]
+      
     else
-      redirect_to login_url, notice: "Senha incorreta"
+      redirect_to login_url, notice: "Senha ou usuário incorreto"
       #render action:new
       #flash.now[:notice] = "Email or password is invalid"
 
