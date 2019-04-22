@@ -33,7 +33,7 @@ class UsersController < ApplicationController
 
     respond_to do |format|
       if @user.save
-        #UserMailer.signup_email(@user).deliver_now
+        UserMailer.signup_email(@user).deliver_now
         format.html { redirect_to @user, notice: 'Usuario criado, favor confirmar cadastro em seu e-mail.' }
         format.json { render :show, status: :created, location: @user }
       else
