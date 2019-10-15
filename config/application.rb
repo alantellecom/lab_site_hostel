@@ -17,7 +17,7 @@ module SiteHostel
     # the framework and any gems in your application.
 
     config.action_mailer.delivery_method = :postmark
-    config.action_mailer.postmark_settings = { :api_token => "1879c67c-5e72-4ea5-a200-2bc0a18ed65b" }
+    config.action_mailer.postmark_settings = { :api_token =>  Rails.application.credentials[:postmark_key] }
     end
 end
 
